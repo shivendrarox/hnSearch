@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import parse from 'html-react-parser';
 import styles from '../styles/Post.module.css'
 import Image from 'next/image'
-
+import Link from 'next/link';
 const PostDetailPage = () => {
   const router = useRouter()
   const { objectID } = router.query
@@ -31,9 +31,9 @@ const PostDetailPage = () => {
 
 if (errorEncountered){
   return(
-    <a href="/" className={styles.main}>
+    <Link href="/" className={styles.main}>
         Technical error. Go back and search again
-      </a> 
+      </Link> 
   )
 }
   return (
