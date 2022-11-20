@@ -1,4 +1,4 @@
-import {useState,useEffect} from 'react'
+import {useState,useEffect,Fragment} from 'react'
 import debounce from 'lodash.debounce'
 import SkeletonCustomLoader from "./SkeletonCustomLoader"
 import styles from "./SearchBar.module.css"
@@ -75,14 +75,16 @@ try{
       <>
         <div>
         {filteredApiResponse?.map((item, index) => (
-        <div key={item.id} className={styles.result_item}>
+        <Fragment key={item.id}>
+        <div  className={styles.result_item}>
           {item.objectID?
-                 <a href={"/post?objectID="+item.objectID} key={index}>{item.title||item.story_title}</a>
+          <a href={"/post?objectID="+item.objectID} >{item.title||item.story_title}</a>
             :
-              <p key={index}>{item.title||item.story_title}</p>
+          <p>{item.title||item.story_title}</p>
           }
   
           </div>
+          </Fragment>
         ))}
    
       </div>

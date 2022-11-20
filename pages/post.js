@@ -103,7 +103,7 @@ const Children = (props) => (
   </>
 );
 
-const renderChild = (item) => item.map((it) => <Children key={it.id} children={it} />);
+const renderChild = (item) => item.map((it) => <Children key={it.id}  >{it}</Children>);
 
 
 
