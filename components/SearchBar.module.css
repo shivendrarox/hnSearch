@@ -1,0 +1,23 @@
+.result_item{
+  margin-top:5px;
+    width:300px;
+    height:40px;
+  display:flex;
+  align-items:center;
+}
+.result_item>a{
+    display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+.search_bar{
+  font-size:16px;
+  width:100%;
+}
+@media only screen and (max-width: 600px) {
+  .form_container {
+    width:95%;
+  }
+}
